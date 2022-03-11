@@ -1,0 +1,28 @@
+.section{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+body{
+    /* background-color: black; */
+}
+
+.video_container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#video{
+    opacity: 0%;
+}
+
+#btn{
+    z-index: 1;
+}
