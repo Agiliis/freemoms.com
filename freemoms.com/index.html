@@ -7,19 +7,43 @@
     <title>Document</title>
     <link rel="stylesheet" href="./stylehseet.css">
 </head>
-<body>
+<body style="overflow: hidden; background-image: url('bg.jpg');">
+
+    <!-- <img src="bg.jpg" alt="bg" width="100vw" height="100vh" style="position:absolute;"> -->
     
-    <div id="code_display">
-        <div id="texto"><h3>Put your promotional code here and get you free mom now!</h3></div>
-        <div id="input">
-            <!-- <form action="index.html" method="get"> -->
-                <input type="text" id="codigo" name="codigo" 
-                placeholder="0000-0000" required> 
-                <button type="button" id="btn1" onclick="compareRR()">Submit</button>
-            <!-- </form> -->
+    <div class="display">
+        <div class="head">
+            <h1 id="title">FreeMoms.com</h1>
+            <h5 id="sub">Delivering high quality, free moms to those in need since 1969.</h5>
         </div>
-        <div id="confirm">Validating...</div>
+        <div class="fpage">
+            <div id="texto"><h3>Put your promotional code here and get you free mom now!</h3></div>
+        
+            <div class="input">
+                <input type="text" id="codigo" name="codigo" placeholder="0000-0000" required>       
+                <button type="button" id="btn1" onclick="compareRR()">Submit</button> 
+            </div>
+            <div id="confirm">Validating...</div>
+        </div>
+        
+        <div class="btn2">
+            <button type="button" id="btn2" onclick="playRR()" disabled>Reclaim your mom!</button>
+        </div>
+        <video class="video_container" id="video">
+            <source src="RRvideo.mp4" type="video/mp4">
+        </video>
+        
     </div>
+
+    <!-- <div class="rickRoll">
+        <button type="button" id="btn" onclick="playRR()" disabled></button>
+
+        <div class="video_container">
+            <video id="video">
+                <source src="RRvideo.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div> -->
 
     <script src="jscript.js"></script>
 </body>
