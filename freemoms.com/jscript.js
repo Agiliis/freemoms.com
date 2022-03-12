@@ -1,21 +1,34 @@
+var head = document.querySelector('.head');
+
 var btn1 = document.getElementById('btn1');
 var ctxt = document.getElementById('confirm');
-var cnt = document.querySelector('#code_display');
+var fpage = document.querySelector('.fpage');
+
+var video = document.getElementById('video');
+var btn2 = document.getElementById('btn2');
+var btn2C = document.querySelector('.btn2');
 
 function compareRR(){
     if(String(document.getElementById('codigo').value) == "7425-7655"){
         btn1.disabled = true;
         ctxt.style.opacity = "1";
-        cnt.classList.add("removed");
+        fpage.classList.add("removed");
     }
 }
 
-cnt.addEventListener("transitionend", () =>
+fpage.addEventListener("transitionend", () =>
 {
-    cnt.remove();
-    var loadingGif = document.createElement("IMG");
-    loadingGif.setAttribute(src, "loading.jpg");
-    loadingGif.setAttribute("width", "304");
-    loadingGif.setAttribute("height", "228");
-    document.body.appendChild(loadingGif);
+    fpage.remove();
+    btn2.disabled = false;
+    // btn2.classList.add("discover");
+    btn2C.classList.add("discover");
 });
+
+function playRR(){
+    if(video.paused){
+        head.remove();
+        video.play();
+        btn2.style.opacity = "0";
+        video.style.opacity = "1";
+    }
+}
